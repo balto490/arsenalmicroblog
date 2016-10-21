@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+		<% if @users %>
+		<div id="contributorlist">
+			<% @users.each do |b|%>
+			<ul>
+				<li><%= b.first_name %> <%= b.last_name%> : <%= b.username %></a></li>
+			</ul>
+			<%end%>
+		</div>
+		<%end%>
+</body>
+</html>

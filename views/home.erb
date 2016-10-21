@@ -1,0 +1,22 @@
+
+<body>
+<% if @blogs %>
+	<div id="blogpost">
+		<div class="col-lg-6">
+			<% @blogs.reverse.each do |b| %>
+				<h3><%=b.title%></h3>
+				<h6>By: <%= b.user.username %></h6>
+				<p><%=b.blog_post%></p>
+				<h6><%=b.created_at%></h6>
+			<%end%>
+		</div>
+		<div class="col-lg-6">
+		</div>
+	</div>
+	<%end%>
+</body>
+
+
+
+
+
