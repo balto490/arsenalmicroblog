@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
+<div id = socialmedia>
+		<ul>
+			<li><a href="https://www.facebook.com/arsenal"> <img src="images/facebook.png"></a></li>
+			<li><a href="https://twitter.com/arsenal"> <img src="images/twitter.png"></a></li>
+			<li><a href="https://instagram.com/arsenal/"><img src="images/instagram.png"></a></li>
+		</ul>
+</div>
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1"></script>
+	<link rel="stylesheet" type="text/css" href="/css/style.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script type="text/javascript" src="/javascript/script.js"></script>
 	<title></title>
 </head>
 <body>
+
 	<div id="logo">
 		<h3 id="a">A</h3><h3 id="rsenal">rsenal</h3>
 		<h3 id="blog">Blog</h3>
@@ -16,7 +27,12 @@
 			<li><a href="/contributors">Contributors</a></li>
 		</ul>
 	</div>
+	<% if current_user %>
 	<a id="logout" href="/logout">Logout</a>
+	<h4 id="welcome">Welcome <%= @user_welcome.first_name %></h4>
+	<% else %>
+	<a id="login" href="/login">Login</a>
+	<% end %>
 <%=yield%>
 
 

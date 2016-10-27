@@ -1,9 +1,62 @@
+/*Login Page*/
+
+#loginform {
+	position: absolute;
+	top: 15%;
+	left: 40%;
+}
+
+#logintitle {
+	position: absolute;
+	top: 40%;
+	left: 37%;
+}
+
+/*New User*/
+
+#newuserform {
+	position: absolute;
+	top: 45%;
+	left: 40%;
+}
+
+#newusertitle {
+	position: absolute;
+	top: 40%;
+	left: 37%;
+}
+
+/*Social Media*/
+
+#socialmedia ul {
+	position: fixed;
+	top: 35px;
+	margin-left: 83%;
+	width: 100%;
+	z-index: 4;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#socialmedia li {
+	display: inline-block;
+	list-style-type: none;
+	padding: none;
+}
+
+#socialmedia img {
+	width: 25px;
+}
+
+/*Nav Bar*/
+
 #navbar li {
 	display: inline-block;
 	margin-top: 30px;
 	margin-left: 30px;
 	text-align: center;
 	color: grey;
+	z-index: 3;
 }
 
 #navbar ul {
@@ -14,7 +67,7 @@
 	padding-bottom: 20px;
 	padding-top: 40px;
 	border-bottom: 5px solid black; 
-	z-index: 1;
+	z-index: 3;
 }
 
 #navbar ul li a {
@@ -25,12 +78,21 @@
  /*   background-color: #B19770;*/
 }
 
+#login {
+	position: absolute;
+	left: 1150px;
+	top: 70px;
+	text-decoration: none;
+	z-index: 3;
+	position: fixed;
+}
+
 #logout {
 	position: absolute;
-	left: 1100px;
-	top: 90px;
+	left: 1150px;
+	top: 70px;
 	text-decoration: none;
-	z-index: 2;
+	z-index: 3;
 	position: fixed;
 }
 
@@ -38,6 +100,7 @@
 	padding-top: 200px;
 	margin-right: 40px;
 	margin-left: 40px;
+	width: 900px;
 }
 
 #blogentry {
@@ -48,20 +111,23 @@
 
 #logo {
 	position: absolute;
-	z-index: 3;
+	z-index: 4;
 }
 
 #a {
 	position: fixed;
 	font-size: 100px;
-	top: -80px;
-	left: 20px;
+	top: -10px;
+	left: 25px;
+	z-index: 4;
 }
 
 #rsenal {
 	position: fixed;
 	font-size: 40px;
 	left: 80px;
+	top: 15px;
+	z-index: 4;
 }
 
 #blog {
@@ -72,8 +138,120 @@
 	color: red;
 }
 
+.col-lg-6 {
+	padding-border: 1px solid red;
+	padding: 5px;
+	height: 200px;
+/*	margin: 5px;*/
+}
+
+#loginform {
+	padding-top: 200px;
+	z-index: 4;
+}
+
+/*Modal*/
+
+#modal {
+	/*display: none;*/
+	background-color: white;
+	opacity: 0.98;
+	position: fixed;
+	z-index: 4;
+	right: 23%;
+	top: 20%;
+	width: 700px;
+	height: 400px;
+	border: 5px solid red;
+	display: none;
+}
+
+/*Alexis Image Home*/
+
+#alexis {
+	position: absolute;
+	width: 250px;
+	top: 150px;
+	left: 900px;
+}
+
+#santi {
+	position: absolute;
+	width: 200px;
+	top: 600px;
+	left: 950px;
+}
+
+/*Post Detail*/
+
+#post_detail {
+	margin-right: 40px;
+	margin-left: 40px;
+	padding-top: 200px;
+}
+
+#otherposts {
+	padding-top: 200px;
+}
+
+#welcome {
+	z-index: 3;
+	position: absolute;
+	right: 20px
+}
+
+/*Contributor List*/
+
+.title {
+	margin-left: 40px;
+}
+
+#authorlist {
+	position: absolute;
+	width: 33%;
+	z-index: 2;
+	background-color: white;
+	top: 200px;
+
+}
+
+#slideprofile {
+	position: absolute;
+	width: 33%;
+	top: 200px;
+	background-color: white;
+	display: none;
+	z-index: 1;
+}
+
+#slidepost {
+	position: absolute;
+	width: 33%;
+	top: 200px;
+	display: none
+	z-index: -1;
+}
+
+.rightborder {
+	border-right: 5px solid black;
+}
+
+.contributorlist {
+
+	margin-right: 20px;
+	margin-left: 20px;
+	height: 350px;
+}
+
+.contributorlist li {
+	text-decoration: none;
+	list-style-type: none;
+	padding-top: 20px;
+}
 
 
-
+#posts {
+	height: 350px;
+}
 
 

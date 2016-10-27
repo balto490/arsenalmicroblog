@@ -4,10 +4,14 @@
 	<title>Login</title>
 </head>
 <body>
+	<h4 id="logintitle">Please Enter Username and Password</h4>
+	<div id="loginform">
 	<form method="POST" action="/login">
-   		<label>Username</label><input name="username" /><br />
+		<label>Username</label><input name="username" /><br />
    		<label>Password</label><input name="password" /><br />
    		<input type="submit" value="Enter" />
-   	</form>
+   		<h5>Don't have a profile?<a href="/login/new">Create one here</a></h5>
+	</form>
+	</div>
 </body>
 </html>

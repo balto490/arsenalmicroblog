@@ -4,14 +4,20 @@
 	<title></title>
 </head>
 <body>
+<div id="authorlist">
+<!-- <div class="col-lg-4"> -->
 		<% if @users %>
-		<div id="contributorlist">
-			<% @users.each do |b|%>
+		<h2 class="title">Contributing Authors</h2>
+		<div class="rightborder">
+		<div class="contributorlist">
+			<% @users.reverse.each do |b|%>
 			<ul>
-				<li><%= b.first_name %> <%= b.last_name%> : <%= b.username %></a></li>
+				<li><%= b.first_name %> <%= b.last_name%> : <a class="userbutton" href="/contributors_detail/<%= b.id %>"><%= b.username %></a></li>
 			</ul>
 			<%end%>
 		</div>
+		</div>
 		<%end%>
-</body>
+<!-- </div> -->
+</div>
 </html>

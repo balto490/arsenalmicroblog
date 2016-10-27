@@ -1,19 +1,42 @@
 
 <body>
+<img id="alexis" src="/images/alexis.png">
+<img id="santi" src="/images/santi.png">
+<div id="cover">
 <% if @blogs %>
 	<div id="blogpost">
+		<% @blogs.reverse.each do |b|
+		next if b.user.nil? 
+		 %>
 		<div class="col-lg-6">
-			<% @blogs.reverse.each do |b| %>
+			
 				<h3><%=b.title%></h3>
 				<h6>By: <%= b.user.username %></h6>
-				<p><%=b.blog_post%></p>
+				
+				<%post = b.blog_post.split(' ').join('_')%>
+
+				<%arr = []%>
+				<%for i in 0..150 do %>
+				<%arr.push(post[i])%>
+				<%end%>
+				<p><%=arr.join("").split('_').join(' ')%> <a href="/post/<%= b.id %>">Read More</a></p>
 				<h6><%=b.created_at%></h6>
-			<%end%>
 		</div>
-		<div class="col-lg-6">
-		</div>
+		<%end%>
 	</div>
+	<!-- <div id="modal">
+		<div id="close">X</div>
+			<h1>Login</h1>
+			<h5>Please enter your username and password</h5>
+			<form method="POST" action="/login">
+				<label>Username</label><input name="username" /><br />
+   				<label>Password</label><input name="password" /><br />
+   				<input type="submit" value="Enter" />
+   				<h5>Don't have a profile?<a href="/login/new">Create one here</a></h5>
+			</form>
+		</div> -->
 	<%end%>
+</div>
 </body>
 
 

@@ -1,0 +1,47 @@
+<body>
+<div id="authorlist">
+<!-- <div class="col-lg-4"> -->
+		<% if @users %>
+		<h2 class="title">Contributing Authors</h2>
+		<div class="rightborder">
+		<div class="contributorlist">
+			<% @users.reverse.each do |b|%>
+			<ul>
+				<li><%= b.first_name %> <%= b.last_name%> : <a class="userbutton" href="/contributors_detail/<%= b.id %>"><%= b.username %></a></li>
+			</ul>
+			<%end%>
+		</div>
+		</div>
+		<%end%>
+<!-- </div> -->
+</div>
+<div id="slideprofile">
+	<!-- <div class="col-lg-4"> -->
+		<h2 class="title">Author Profile</h2>
+		<div class="rightborder">
+		<div class="contributorlist">
+		<ul>
+			<li>Name: <%= @user_select.first_name %> <%= @user_select.last_name %></li>
+			<li>City: <%= @user_select.city %> </li>
+			<li>State: <%= @user_select.state %> </li>
+			<li>Email: <%= @user_select.email %> </li>
+			<li>Username: <%= @user_select.username %> </li>
+			<li>Number of posts: <%= @user_select.blogs.count %> </li>
+		</ul>
+		</div>
+		</div>
+	<!-- </div> -->
+</div>
+<div id="slidepost">
+	<h2 class="title">Posts by <%= @user_select.username %></h2>
+	<div class="contributorlist">
+	<!-- <div id="posts" class="col-lg-4"> -->
+	<% @user_select.blogs.each do |b| %>
+		<h3><%=b.title%></h3>
+		<h6>By: <%= b.user.username %></h6>
+		 <h5><a href="/post/<%= b.id %>">Read Article</a></h5>
+		<h6><%=b.created_at%></h6>
+	<%end%>
+	<!-- </div> -->
+</div>
+</body>
